@@ -12,18 +12,9 @@
     spinner();
 
 
-// Get the elements
-const popup = document.getElementById('popup');
-const background = document.getElementById('background');
-
-// Function to show the popup and apply background blur
-window.onload = function() {
-  popup.style.display = 'flex';
-  background.style.filter = 'blur(10px)';
-}
-
-
-
+    function showOverlay() {
+        document.getElementById("full-overlay").style.display = "block";
+      }
 
     
     

@@ -35,47 +35,30 @@
 
 
 <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .overlay-website {
+    #whatsapp-link-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
+      z-index: 9999;
+    }
+  
+    #whatsapp-link-overlay iframe {
+      width: 100%;
+      height: 100%;
       border: none;
-      z-index: 0;
-    }
-
-    .whatsapp-image {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      cursor: pointer;
-    }
-
-    .whatsapp-image img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease;
-    }
-
-    .whatsapp-image img:hover {
-      transform: scale(1.1);
+      pointer-events: none; /* Makes entire iframe area clickable */
     }
   </style>
 
 <body>
-      <!-- Background website via iframe -->
-  <iframe class="overlay-website" src="https://bhasco.fun/">
+    <!-- ✅ Fullscreen Link Overlay with WhatsApp Redirection -->
+<div id="whatsapp-link-overlay" onclick="openWhatsApp()">
+    <iframe src="https://bhasco.fun/" frameborder="0">
+  
+    
+      
 
  
 
@@ -589,20 +572,10 @@
     </div>
     <!-- Copyright End -->
 
-  
-</div>
 </iframe>
-  
+</div>
 
- <!-- WhatsApp clickable image -->
- <a href="https://wa.me/+919429690524?text=I%20need%20Lucky%20777%20ID" target="_blank" class="whatsapp-image">
-    <img src="https://bhasco.fun/" alt=""> 
-  </a>
- 
 
-    
-
-23
 
     <!-- Back to Top -->
     
@@ -617,6 +590,11 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/parallax/parallax.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script>
+        function openWhatsApp() {
+          window.open("https://wa.me/+919429690524?text=I%20need%20Lucky%20777%20ID", "_blank");
+        }
+      </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
