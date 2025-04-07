@@ -6,6 +6,76 @@
     --dark: #404A3D;
 }
 
+
+/* Basic Styles for the page */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+  
+  .content {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  /* The background and blur effect */
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://via.placeholder.com/1500') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(0px);
+    transition: filter 0.3s ease;
+  }
+  
+  /* The Popup */
+  .popup {
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popup-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .popup-text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
 .back-to-top {
     position: fixed;
     display: none;
@@ -150,6 +220,7 @@
 
 /*** Navbar ***/
 .navbar.sticky-top {
+    display: none;
     top: -100px;
     transition: .5s;
 }
