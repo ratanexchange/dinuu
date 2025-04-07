@@ -12,11 +12,6 @@
     spinner();
 
 
-    function showOverlay() {
-        document.getElementById("full-overlay").style.display = "block";
-      }
-
-    
     
     // Initiate the wowjs
     new WOW().init();
